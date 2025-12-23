@@ -2,7 +2,8 @@
 using namespace std;
 #define ll long long
 
-vector<int> a;
+const int N = 2e5 + 5;
+vector<int> a(N);
 
 vector<int> merge(vector<int> &l, vector<int> &r) {
     int n = l.size(), m = r.size();
@@ -31,10 +32,9 @@ vector<int> merge_sort(int low, int high) {
 int main() {
     int n;
     cin >> n;
-    vector<int> t(n);
-    for(int i = 0; i < n; i++) cin >> t[i];
-
-    a = t;
+    vector<int> a(n);
+    for(int i = 0; i < n; i++) cin >> a[i];
+    
     a = merge_sort(0, n - 1);
     for(int i = 0; i < n; i++) cout << a[i];
  
