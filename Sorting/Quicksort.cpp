@@ -19,7 +19,7 @@ int partition(int low, int high) {
 }
 
 void quick_sort(int low, int high) {
-    if(low == high) return;
+    if(low >= high) return;
     int pvt_index = partition(low, high);
     quick_sort(low, pvt_index - 1);
     quick_sort(pvt_index + 1, high);
